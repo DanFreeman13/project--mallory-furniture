@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
+/*
+    font-family: 'Playfair Display', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+*/
+
+* {
+  box-sizing: content-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  background-color: #202020;
+  background-image: url('./images/static.png');
+  background-repeat: repeat;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#AppContainer{
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Header */
+
+#mainHeader {
+  width: 100%;
+  height:80px;
+  background: #000000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+#topLogo{
+  height: inherit;
+  padding-left: 20px;
+}
+
+#topLogo img {
+  margin: 10px;
+  height: 80%;
+}
+
+#shopping {
+  background-color: #FFC107;
+  padding: 25px 15px;
+  margin-left: 20px;
+}
+
+#shopping i {
+  color: black;
+  font-size: 30px;
+}
+
+.mainHeader_list{
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  border-right: 2px solid white;
+}
+
+.mainHeader_elem{
+  padding: 0 15px;
+}
+
+.mainHeader_elem a{
+  color: white;
+}
+
+/* Page Content */
+
+.whiteSpaceContainer{
+  padding-top: 0;
+  background-color: white;
+}
+
+.TermsInfo{
+  padding-top: 30px;
+  margin: 0 190px;
+}
+
+.sectionInfo {
+  margin: 10px;
+}
+
+#MainTitle{
+  font-size: 40px;
+  margin: 0;
+}
+
+.Subtitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.normalText {
+  font-size: 20px;
+  color: #000;
+}
+
+#desc1 {
+  color: #999999;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Bottom Section */
+
+#bottomSection{
+  border-top: 2px solid #999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bottomSection .MF_logo{
+  padding: 20px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+#bottomSection img{
+  width: 100%;
+}
+
+#bottomSection hr{
+  color: #999999;
+  width: 50px;
+  margin-bottom: 40px;
+}
+
+#bottomCategories{
+  width: 700px;
+}
+
+#bottomCategories thead{
+  color: #F44336;
+}
+
+th {
+  text-align: left;
+}
+
+.Social{
+  text-align: right;
+}
+
+.linkToSocial {
+  text-align: right;
+}
+
+.linkToSocial a{
+  margin: 0 5px;
+}
+
+#bottomCategories a{
+  color: #000;
+}

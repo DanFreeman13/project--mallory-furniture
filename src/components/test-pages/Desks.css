@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
+/*
+    font-family: 'Playfair Display', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+*/
+
+* {
+  box-sizing: content-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  background-color: #202020;
+  background-image: url('./images/static.png');
+  background-repeat: repeat;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#AppContainer{
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Header */
+
+#mainHeader {
+  width: 100%;
+  height:80px;
+  background: #000000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+#topLogo{
+  height: inherit;
+  padding-left: 20px;
+}
+
+#topLogo img {
+  margin: 10px;
+  height: 80%;
+}
+
+#shopping {
+  background-color: #FFC107;
+  padding: 25px 15px;
+  margin-left: 20px;
+}
+
+#shopping i {
+  color: black;
+  font-size: 30px;
+}
+
+.mainHeader_list{
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  border-right: 2px solid white;
+}
+
+.mainHeader_elem{
+  padding: 0 15px;
+}
+
+.mainHeader_elem a{
+  color: white;
+}
+
+/* Page Content */
+
+.whiteSpaceContainer{
+  padding-top: 0;
+  background-color: white;
+}
+
+#CategoryCover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  background-image: url('../../images/category-desks.png');
+  background-size: cover;
+}
+
+.CategoryInfo{
+  margin-top: -10px;
+}
+
+.sectionInfo {
+  margin: 10px;
+}
+
+#MainTitle{
+  font-size: 40px;
+  margin: 30px 0 0 0;
+}
+
+#desc1 {
+  color: #999999;
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Product Filter Controls */
+
+#FilterControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.controlButtons {
+  position: relative;
+  left: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.button3 {
+  cursor: pointer;
+  width: 100px;
+  color: #ff4957;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #ff4957;
+  margin: 10px;
+}
+
+.button4 {
+  cursor: pointer;
+  width: 100px;
+  color: #999999;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #999999;
+  margin: 10px;
+}
+
+#counterTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-right: 10px;
+  text-align: right;
+  color: #999999;
+  font-weight: 700;
+}
+
+#counterTitle strong{
+  padding-right: 5px;
+  font-size: 35px;
+  color: #ffc107;
+}
+
+/* Products shown */
+
+#ProductList {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.individualProduct{
+  height: 550px;
+  width: 32%;
+  border: 2px solid #999999;
+  box-shadow: 2px 2px #999999;
+  padding: 5px;
+  margin: 5px 0;
+  position: relative;
+
+}
+
+.productDesc{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.articleName {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  margin: 0;
+}
+
+.articlePrice {
+  font-weight: 600;
+  font-size: 20px;
+  color: #999999;
+  margin: 0;
+}
+
+
+/* Bottom Section */
+
+#bottomSection{
+  border-top: 2px solid #999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bottomSection .MF_logo{
+  padding: 20px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+#bottomSection img{
+  width: 100%;
+}
+
+#bottomSection hr{
+  color: #999999;
+  width: 50px;
+  margin-bottom: 40px;
+}
+
+#bottomCategories{
+  width: 700px;
+}
+
+#bottomCategories thead{
+  color: #F44336;
+}
+
+th {
+  text-align: left;
+}
+
+.Social{
+  text-align: right;
+}
+
+.linkToSocial {
+  text-align: right;
+}
+
+.linkToSocial a{
+  margin: 0 5px;
+}
+
+#bottomCategories a{
+  color: #000;
+}
