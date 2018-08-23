@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import request from 'superagent';
-import { HashRouter } from 'react-router-dom'
-import Header from '../header/Header.js'
+
 
 
 class Product extends Component {
@@ -10,6 +9,7 @@ class Product extends Component {
     super();
 
     this.state = {
+      id: props.match.params.productId,
       item: "",
       image: "",
       price: 0,
@@ -32,6 +32,11 @@ class Product extends Component {
     })
 
   }
+
+  // sendId = (e) => {
+  //
+  //   console.log(e.target.attributes)
+  // }
 
 
   render() {
@@ -58,7 +63,8 @@ class Product extends Component {
                 <p id="stat">Meassurements</p>
                 <p className="statCond"> W:{this.state.meassure.width}, H:{this.state.meassure.height}, L:{this.state.meassure.length} </p>
               </div>
-              <button id="addToCart">Add to Cart</button>
+              <button id="addToCart" onClick={ this.sendId }>Add to Cart</button>
+
             </div>
 
           </div>

@@ -52,7 +52,7 @@ class Category extends Component {
 
     if(newString==='onSale') {
 
-      const filterProduct = original.filter( e => e.onSale===true)
+      const filterProduct = original.filter( e => e.onSale===true);
 
       this.setState({
         product: filterProduct
@@ -66,6 +66,7 @@ class Category extends Component {
         product: original,
       })
     }
+    return this.state;
   }
 
   render() {

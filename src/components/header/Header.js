@@ -6,7 +6,7 @@ import MFLogo1 from '../../images/MFlogo.png'
 
 class Header extends Component {
 
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
@@ -23,15 +23,7 @@ class Header extends Component {
   }
 
   showCartList = () => {
-    // if (this.state.show === false) {
-    //   this.setState({
-    //     show: true
-    //   });
-    // } else {
-    //   this.setState({
-    //     show: false
-    //   });
-    // }
+
     this.setState({
       show:!this.state.show
     })

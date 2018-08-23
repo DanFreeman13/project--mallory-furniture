@@ -18,11 +18,13 @@ import './App.css';
 
 class App extends Component {
 
-  render() {
+  
+
+  render(props) {
     return (
       <div id="AppContainer">
 
-        <Header />
+        <Header path={props}/>
 
         <div className="whiteSpaceContainer">
           <Switch>
