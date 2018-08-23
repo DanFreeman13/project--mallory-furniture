@@ -9,9 +9,9 @@ import About from './components/about/about.js';
 import Terms from './components/terms/terms.js';
 import All from './components/all-products/all.js';
 
+import Error from './components/404.js';
 
 import Category from './components/category/category.js';
-import Error from './components/404.js';
 import Product from './components/product/singleproduct.js';
 
 import './App.css';
@@ -27,12 +27,12 @@ class App extends Component {
         <div className="whiteSpaceContainer">
           <Switch>
             <Route exact path='/' component={ Home } />
-            <Route exact path='/404' component={ Error } />
             <Route exact path='/about' component={ About } />
             <Route exact path='/terms' component={ Terms } />
             <Route exact path='/all-products' component={ All } />
             <Route path='/category/:categoryName' component={ Category } />
             <Route path='/product/:productId' component={ Product } />
+            <Route component={Error} />
           </Switch>
 
           <Bottom />

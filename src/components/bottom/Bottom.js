@@ -33,7 +33,7 @@ class Bottom extends Component {
               </td>
             </tr>
             <tr>
-              <td><Link to="/404">Press</Link></td>
+              <td><Link to="/Press">Press</Link></td>
               <td><Link to="/category/Tables">Tables</Link></td>
               <td></td>
             </tr>

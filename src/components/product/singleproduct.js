@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import request from 'superagent';
+import { HashRouter } from 'react-router-dom'
+import Header from '../header/Header.js'
+
 
 class Product extends Component {
 
@@ -31,8 +34,9 @@ class Product extends Component {
   }
 
 
-  render(props) {
+  render() {
     return (
+
       <article className="SelectedInfo">
         <section className="productInfo">
 

@@ -35,30 +35,38 @@ a {
 
 /* Header */
 
-#mainHeader {
+#header {
   top: 0;
   position: fixed;
+  height: 80px;
   width: inherit;
+  background-color: #000000;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#mainHeader {
+  width: 70%;
   height:80px;
-  background: #000000;
   margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   align-content: center;
-  z-index: 1;
 }
 
 #topLogo{
   height: inherit;
-  padding-left: 20px;
 }
 
 #topLogo img {
-  margin: 10px;
-  height: 80%;
+  margin: 10px 15px;
+  height: 60px;
 }
 
 #shopping {
+  cursor: pointer;
   display: flex;
   align-items: center;
   background-color: #FFC107;
@@ -73,20 +81,106 @@ a {
 }
 
 .mainHeader_list{
-  font-size: 20px;
+  width: auto;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   flex-direction: row;
-  padding: 0 20px;
+  padding: 0 10px;
   border-right: 2px solid white;
 }
 
-.mainHeader_elem{
-  padding: 0 15px;
+.mainHeader_elem li{
+  padding: 0;
+  margin: 0 10px;
 }
 
 .mainHeader_elem a{
+  margin: 0 10px;
+  color: #2196F3;
+}
+
+/* Cart List */
+
+#shoppingCartList{
+  height: calc(100vh - 80px);
+  width: inherit;
+  margin: 0;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+#shoppingCartList header{
+  display: flex;
+  align-content: center;
+  height: 80px;
+  background-color: #2196F3;
+  animation-name: appears;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: appears;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes appears {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@-webkit-keyframes appears {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+#shoppingCartList h2{
+  font-size: 25px;
   color: white;
+  margin: auto;
+}
+
+#cartList {
+  height: calc(100vh - 80px);
+  z-index: -1;
+  position: relative;
+  padding-left: 0;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(153, 153, 153, 0.8);
+  overflow-y: auto;
+  opacity: 0;
+  animation-name: goesdown;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: goesdown;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+
+
+}
+@keyframes goesdown {
+    from {top: -1000px;}
+    to {top: 0px; opacity: 1; animation-delay: 0; position: static;}
+}
+@-webkit-keyframes goesdown {
+    from {top: -1000px;}
+    to {top: 0px; opacity: 1; animation-delay: 0; position: static;}
+}
+
+#cartList .tag{
+  text-align: center;
+  padding: 20px 0;
+  width: inherit;
+  background-color: white;
+}
+
+.carList_background{
+  line-height: 0;
+  padding: 0;
+  opacity: 0.5;
+  margin-bottom: 10px;
 }
 
 /* Page Content */
