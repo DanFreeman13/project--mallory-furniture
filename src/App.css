@@ -38,7 +38,7 @@ a {
 #mainHeader {
   top: 0;
   position: fixed;
-  width: 100%;
+  width: inherit;
   height:80px;
   background: #000000;
   margin: 0;
@@ -509,4 +509,83 @@ th {
 
 #bottomCategories a{
   color: #000;
+}
+
+/* Media Querys */
+
+@media screen and (max-width: 1366px) {
+  #mainHeader {
+    height: 60px;
+  }
+
+  #mainHeader a{
+    font-size: 12px;
+  }
+
+
+  #mainHeader i{
+    font-size: 12px;
+  }
+
+  #mainHeader li{
+    padding: 10px;
+  }
+
+  #mainHeader ul{
+    font-size: 12px;
+  }
+
+  #shopping{
+    height: 60px;
+    font-size: 15px;
+  }
+
+  #shopping i{
+    font-size: 15px;
+  }
+
+  .whiteSpaceContainer{
+    margin-top: 60px;
+  }
+
+  #TitleCover {
+    height: 400px;
+  }
+
+  #FirstTitle{
+    font-size: 50px;
+  }
+
+  #SecondTitle{
+    font-size: 25px;
+  }
+
+  #ProductList {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .individualProduct {
+    width: 30%;
+    height: 400px;
+  }
+
+  .individualProduct p{
+    font-size: 12px;
+  }
+
+  .button1, .button2, .button3, .button4 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #AppContainer{
+    width: 100%;
+  }
+
+  .individualProduct {
+    width: 40%;
+    height: 400px;
+  }
 }
