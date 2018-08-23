@@ -34,8 +34,6 @@ class Category extends Component {
     this.getCategory(props.match.params.categoryName)
   }
 
-
-
   componentWillReceiveProps(newProps) {
     this.setState({
       product: [],
@@ -53,19 +51,11 @@ class Category extends Component {
     var original = this.state.original;
 
     if(newString==='onSale') {
-      var allInfo = [];
+
+      const filterProduct = original.filter( e => e.onSale===true)
 
       this.setState({
-        product: []
-      })
-      original.filter(function(e){
-        if(e.onSale===true) {
-          allInfo.push(e)
-        }
-        return allInfo
-      });
-      this.setState({
-        product: allInfo,
+        product: filterProduct
       })
 
     } else {
@@ -83,7 +73,7 @@ class Category extends Component {
       <article className="CategoryInfo">
         <section className="sectionInfo">
 
-          <section id={`${this.props.match.params.categoryName}Cover`}>
+          <section id={`${this.props.match.params.categoryName}Cover`} className="CategoryCover">
 
           </section>
 

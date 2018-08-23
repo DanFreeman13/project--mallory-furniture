@@ -23,15 +23,18 @@ class Header extends Component {
   }
 
   showCartList = () => {
-    if (this.state.show === false) {
-      this.setState({
-        show: true
-      });
-    } else {
-      this.setState({
-        show: false
-      });
-    }
+    // if (this.state.show === false) {
+    //   this.setState({
+    //     show: true
+    //   });
+    // } else {
+    //   this.setState({
+    //     show: false
+    //   });
+    // }
+    this.setState({
+      show:!this.state.show
+    })
 
   }
 

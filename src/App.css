@@ -218,66 +218,50 @@ a {
   margin-top: 40px;
 }
 
-#SeatingCover {
+.CategoryCover {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 400px;
-  background-image: url('./images/category-seating.png');
   background-size: cover;
+}
+
+#SeatingCover {
+
+  background-image: url('./images/category-seating.png');
+
 }
 
 #DesksCover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px;
+
   background-image: url('./images/category-desks.png');
-  background-size: cover;
+
 }
 
 #TablesCover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px;
+
   background-image: url('./images/category-tables.png');
-  background-size: cover;
+
 }
 
 #StorageCover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px;
+
   background-image: url('./images/category-storage.png');
-  background-size: cover;
+
 }
 
 #BedroomCover {
-  width: 100%;
-  height: 400px;
+
   background-image: url('./images/category-bedroom.png');
-  background-size: cover;
+
 }
 
 #MiscellaneousCover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px;
+
   background-image: url('./images/category-miscellaneous.png');
-  background-size: cover;
+
 }
 
 .MainInfo{
@@ -470,9 +454,9 @@ a {
 /* Product List */
 
 #ProductList {
-  padding-left: 0;
-  padding-bottom: 30px;
-  margin: 0;
+  width: inherit;
+  padding: 0 0 30px 0;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -484,7 +468,7 @@ a {
   border: 2px solid #999999;
   box-shadow: 2px 2px 2px #999999;
   padding: 5px;
-  margin: 5px 0;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -559,6 +543,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 #bottomSection .MF_logo{
