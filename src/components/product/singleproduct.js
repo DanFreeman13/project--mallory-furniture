@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 
-
-
 class Product extends Component {
 
   constructor(props) {
     super();
-
     this.state = {
       id: props.match.params.productId,
       item: "",
       image: "",
       price: 0,
       condition: "",
-      meassure: {width: 0, height: 0, length: 0}
+      meassure: {width: 0, height: 0, length: 0},
+      function: props.fn
     }
 
-    const ENDPOINT = `https://mallory-furniture-admin.now.sh/api/v1/products/`+props.match.params.productId;
+    const ENDPOINT = `https://mallory-furniture-admin.now.sh/api/v1/products/`+this.state.id;
 
     request
     .get(ENDPOINT)
@@ -30,14 +28,11 @@ class Product extends Component {
         meassure: {width: response.body.width, height: response.body.height, length: response.body.length }
       })
     })
-
   }
 
-  // sendId = (e) => {
-  //
-  //   console.log(e.target.attributes)
-  // }
+  addToCart = () => {
 
+  }
 
   render() {
     return (
@@ -63,7 +58,7 @@ class Product extends Component {
                 <p id="stat">Meassurements</p>
                 <p className="statCond"> W:{this.state.meassure.width}, H:{this.state.meassure.height}, L:{this.state.meassure.length} </p>
               </div>
-              <button id="addToCart" onClick={ this.sendId }>Add to Cart</button>
+              <button id="addToCart" onClick={this.addToCart}>Add To Cart</button>
 
             </div>
 

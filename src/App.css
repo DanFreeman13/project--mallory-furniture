@@ -145,7 +145,6 @@ a {
   margin-top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: rgba(153, 153, 153, 0.8);
   overflow-y: auto;
   opacity: 0;
@@ -157,9 +156,8 @@ a {
   -webkit-animation-duration: 0.5s;
   -webkit-animation-delay: 0.5s;
   -webkit-animation-fill-mode: forwards;
-
-
 }
+
 @keyframes goesdown {
     from {top: -1000px;}
     to {top: 0px; opacity: 1; animation-delay: 0; position: static;}
@@ -170,10 +168,21 @@ a {
 }
 
 #cartList .tag{
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
   text-align: center;
   padding: 20px 0;
   width: inherit;
   background-color: white;
+}
+
+.tag i{
+  cursor: pointer;
+  font-size: inherit;
+  position: absolute;
+  right: 10px;
+  top: 20px;
 }
 
 .carList_background{
@@ -229,39 +238,27 @@ a {
 }
 
 #SeatingCover {
-
   background-image: url('./images/category-seating.png');
-
 }
 
 #DesksCover {
-
   background-image: url('./images/category-desks.png');
-
 }
 
 #TablesCover {
-
   background-image: url('./images/category-tables.png');
-
 }
 
 #StorageCover {
-
   background-image: url('./images/category-storage.png');
-
 }
 
 #BedroomCover {
-
   background-image: url('./images/category-bedroom.png');
-
 }
 
 #MiscellaneousCover {
-
   background-image: url('./images/category-miscellaneous.png');
-
 }
 
 .MainInfo{

@@ -18,15 +18,22 @@ import './App.css';
 
 class App extends Component {
 
-  
+  constructor(props) {
+    super();
+  }
 
-  render(props) {
+  componentWillReceiveProps(props){
+    console.log(props)
+  }
+
+  render() {
     return (
       <div id="AppContainer">
 
-        <Header path={props}/>
+        <Header />
 
         <div className="whiteSpaceContainer">
+
           <Switch>
             <Route exact path='/' component={ Home } />
             <Route exact path='/about' component={ About } />

@@ -2,13 +2,13 @@ import React , {Component} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 import MFLogo1 from '../../images/MFlogo.png'
+import Cart from '../cart/cart.js'
 
 
 class Header extends Component {
 
   constructor(props) {
     super();
-
     this.state = {
       category: [
         {key: 0, name: "Seating", classUsed: 'mainHeader_elem'},
@@ -72,33 +72,7 @@ class Header extends Component {
       </nav>
 
       { this.state.show &&
-        <div autoFocus id="shoppingCartList" >
-          <header><h2>Your Cart List</h2></header>
-            <ul id="cartList">
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="tag">No elements selected yet</li>
-              <li className="carList_background"></li>
-            </ul>
-        </div>
+        <Cart />
       }
       </div>
     )
