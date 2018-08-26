@@ -17,15 +17,6 @@ import Product from './components/product/singleproduct.js';
 import './App.css';
 
 class App extends Component {
-
-  constructor(props) {
-    super();
-  }
-
-  componentWillReceiveProps(props){
-    console.log(props)
-  }
-
   render() {
     return (
       <div id="AppContainer">
