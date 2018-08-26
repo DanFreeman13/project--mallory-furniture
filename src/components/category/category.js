@@ -93,15 +93,18 @@ class Category extends Component {
           <ul id="ProductList">
             {this.state.product.map(each => {
               return(
-                <li key={each.key} className="individualProduct">
-                  <div className="productImage">
-                    <Link to={`/product/${ each._id }`}><img src={each.imageLink} alt="Current Product" /></Link>
-                  </div>
 
-                  <article className="productDesc">
-                    <p className="articleName">{each.item}</p>
-                    <p className="articlePrice">${each.price}</p>
-                  </article>
+                <li key={each.key} className="individualProduct">
+                  <Link to={`/product/${ each._id }`}>
+                    <div className="productImage">
+                      <img src={each.imageLink} alt="Current Product" />
+                    </div>
+
+                    <article className="productDesc">
+                      <p className="articleName">{each.item}</p>
+                      <p className="articlePrice">${each.price}</p>
+                    </article>
+                  </Link>
                 </li>
               )
             })}

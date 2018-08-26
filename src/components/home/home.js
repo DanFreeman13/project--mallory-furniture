@@ -54,20 +54,23 @@ class Home extends Component {
 
 
             <ul id="ProductList">
-            {this.state.product.map(each => {
-              return(
-                <li key={each.key} className="individualProduct">
-                  <div className="productImage">
-                    <img src={each.imageLink} alt="Current Product"/>
-                  </div>
+              {this.state.product.map(each => {
+                return(
 
-                  <article className="productDesc">
-                    <p className="articleName">{each.item}</p>
-                    <p className="articlePrice">${each.price}</p>
-                  </article>
-                </li>
-              )
-            })}
+                  <li key={each.key} className="individualProduct">
+                    <Link to={`/product/${ each._id }`}>
+                      <div className="productImage">
+                        <img src={each.imageLink} alt="Current Product" />
+                      </div>
+
+                      <article className="productDesc">
+                        <p className="articleName">{each.item}</p>
+                        <p className="articlePrice">${each.price}</p>
+                      </article>
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
 
             <div className="buttons">
