@@ -1,9 +1,12 @@
 import React , {Component} from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import request from 'superagent'
+
 
 import MFLogo1 from '../../images/MFlogo.png'
 import Cart from '../cart/cart.js'
 
+var counterProds = 0
 
 class Header extends Component {
 
@@ -18,7 +21,7 @@ class Header extends Component {
         {key: 4, name: 'Bedroom', classUsed: 'mainHeader_elem'},
         {key: 5, name: 'Miscellaneous', classUsed: 'mainHeader_elem'}],
       show: false,
-      otherState: '.mainHeader_elem'
+      selected: []
     }
   }
 
@@ -30,7 +33,63 @@ class Header extends Component {
 
   }
 
+
+  addCurentId = (e) => {
+    var review = e.currentTarget.baseURI;
+    var start= review.length-1;
+    var finish = review.length-11;
+    var textId = [];
+    for (var i=start; i>=finish; i--) {
+      if (review[i]!== "/") {
+        textId.unshift(review[i]);
+      } else { textId.unshift(""); }
+    }
+    var prodid=textId.join("")
+
+    //
+    const ENDPOINT = `https://mallory-furniture-admin.now.sh/api/v1/products/`+prodid;
+
+    request
+    .get(ENDPOINT)
+    .then(response => {
+      var selectedProd = {
+        key: counterProds,
+        id: response.body._id,
+        item: response.body.item,
+        image: response.body.imageLink,
+        price: response.body.price};
+      this.setState({
+        selected: [...this.state.selected,selectedProd]
+      })
+      counterProds++;
+    })
+    //
+
+    return this.state
+
+  }
+
+  componentWillMount(props) {
+
+    this.setState({
+      selected: this.state.selected.splice([props],1)
+    })
+  }
+
+  removeElement = (clicked) => {
+    var position= clicked.currentTarget.parentElement.attributes.id.nodeValue;
+
+    this.componentWillMount(position);
+
+    clicked.currentTarget.parentElement.outerHTML=null;
+
+    return this.state;
+
+  }
+
+
   render () {
+
     return (
       <div id="header">
       <nav id='mainHeader'>
@@ -68,11 +127,10 @@ class Header extends Component {
 
         <a id="shopping" onClick={ this.showCartList }><i className="fas fa-shopping-cart"></i></a>
 
-
       </nav>
 
       { this.state.show &&
-        <Cart />
+        <Cart data={this.state.selected} fnAdd={this.addCurentId} fnRv={this.removeElement}/>
       }
       </div>
     )

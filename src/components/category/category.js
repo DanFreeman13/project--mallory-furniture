@@ -40,6 +40,7 @@ class Category extends Component {
       original: [],
     })
     this.getCategory(newProps.match.params.categoryName)
+    return this.state
   }
 
 

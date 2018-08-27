@@ -103,7 +103,7 @@ a {
 /* Cart List */
 
 #shoppingCartList{
-  height: calc(100vh - 80px);
+  height: calc(100vh - 140px);
   width: inherit;
   margin: 0;
   margin-left: 20px;
@@ -137,8 +137,21 @@ a {
   margin: auto;
 }
 
+#shoppingCartList aside{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+#shoppingCartList button{
+  background-color: #f44336;
+  width: 50px;
+}
+
 #cartList {
-  height: calc(100vh - 80px);
+  width: 100%;
+  height: calc(100vh - 140px);
   z-index: -1;
   position: relative;
   padding-left: 0;
@@ -168,6 +181,7 @@ a {
 }
 
 #cartList .tag{
+  width: 100%;
   font-size: 20px;
   line-height: 20px;
   position: relative;
@@ -175,6 +189,18 @@ a {
   padding: 20px 0;
   width: inherit;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectedImageCart{
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.selectedImageCart img{
+  width: 100%;
 }
 
 .tag i{
