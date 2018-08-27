@@ -30,10 +30,6 @@ class Product extends Component {
     })
   }
 
-  addToCart = () => {
-
-  }
-
   render() {
     return (
 
